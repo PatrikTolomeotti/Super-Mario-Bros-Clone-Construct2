@@ -4,5 +4,26 @@
     <name>Event sheet 1</name>
     <events>
         <include>Mario</include>
+        <event-block sid="980742755438480">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="894457019267741" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="617626075880794" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="641988388512957" type="Function">
+                    <param id="0" name="Name">&quot;Hit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="701802975326388" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="161296123779456" type="Function">
+                    <param id="0" name="Name">&quot;Hit&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

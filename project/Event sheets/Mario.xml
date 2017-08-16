@@ -266,6 +266,134 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="102258120998233">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="126357186029398" type="Mario">
+                            <param id="0" name="Animation">&quot;Grow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="474823371056367" type="Mario">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="813205065153950" type="Mario">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="231460874079212">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="667878869291207" type="Mario">
+                            <param id="0" name="Animation">&quot;Shrink&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="941483747779470" type="Mario">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="607043501641428" type="Mario">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Functions that are triggered by other objects in our game." sid="955553849326873" title="Mario Functions">
+            <sub-events>
+                <event-block sid="809548920025676">
+                    <conditions>
+                        <condition id="0" name="On function" sid="321293102614671" type="Function">
+                            <param id="0" name="Name">&quot;Grow&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="148889082990710" type="Mario">
+                            <param id="0" name="Animation">&quot;Grow&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="113950665460948" type="Mario">
+                            <param id="0" name="Instance variable">IsActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="327060239061791" type="Mario">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="594567356144497" type="Mario">
+                            <param id="0" name="Instance variable">IsBig</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803045185589876">
+                    <conditions>
+                        <condition id="0" name="On function" sid="443595404447495" type="Function">
+                            <param id="0" name="Name">&quot;Hit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="539576330163625">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="616633539047164" type="Mario">
+                                    <param id="0" name="Instance variable">IsBig</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="179579898304831" type="Mario">
+                                    <param id="0" name="Animation">&quot;Shrink&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="794267531325716" type="Mario">
+                                    <param id="0" name="Instance variable">IsActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="432485174489988" type="Mario">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="409177154384917" type="Mario">
+                                    <param id="0" name="Instance variable">IsBig</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="660237584613430">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="763506932313047" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="652394229998618" type="Mario">
+                                    <param id="0" name="Animation">&quot;Dead&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="543328911833861" type="Mario">
+                                    <param id="0" name="Instance variable">IsActive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="550780458791906" type="Mario">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="168943213125659" type="System">
+                                    <param id="0" name="Seconds">0.8</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="959077357146900" type="Mario">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="136025699655345" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="578133915449229" type="Mario">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="213626759319969" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="619835623391163" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

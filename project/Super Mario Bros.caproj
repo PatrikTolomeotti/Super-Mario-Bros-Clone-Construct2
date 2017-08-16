@@ -16,6 +16,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -56,6 +57,9 @@
                 <behaviors>
                     <behavior-type name="Platform" sid="208402545098645">
                         <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="210125752750802">
+                        <behavior id="Sin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
