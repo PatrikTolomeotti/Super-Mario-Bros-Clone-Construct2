@@ -10,6 +10,8 @@
     <unique-id>2p837c7m9042j</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
@@ -38,7 +40,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -172,6 +174,12 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Function" sid="241284713750286">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Keyboard" sid="775722121007120">
+                <plugin id="Keyboard" />
+            </object-type>
         </object-folder>
     </object-folder>
     <families />
@@ -180,8 +188,12 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Mario.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Function" uid="2" />
+        <global-instance type="Keyboard" uid="3" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
