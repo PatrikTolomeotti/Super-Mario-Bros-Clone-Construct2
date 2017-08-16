@@ -40,7 +40,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -100,8 +100,8 @@
                     <animation framecount="3" loop="0" name="BigRunning" pingpong="0" repeatcount="1" repeatto="0" sid="491116520623684" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.71875">
                             <collision-poly>
-                                <point x="0.266667" y="0" />
-                                <point x="0.8" y="0" />
+                                <point x="0.266667" y="0.03125" />
+                                <point x="0.8" y="0.03125" />
                                 <point x="0.8" y="0.96875" />
                                 <point x="0.266667" y="0.96875" />
                             </collision-poly>
@@ -116,21 +116,21 @@
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.71875">
                             <collision-poly>
-                                <point x="0.266667" y="0.03125" />
-                                <point x="0.8" y="0.03125" />
+                                <point x="0.266667" y="0" />
+                                <point x="0.8" y="0" />
                                 <point x="0.8" y="0.96875" />
                                 <point x="0.266667" y="0.96875" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="BigJumping" pingpong="0" repeatcount="1" repeatto="0" sid="799265290873839" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.71875" original-source="D:\Github\Super-Mario-Bros-Clone-Construct2\gfx\Mario\BigJumping.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Github\Super-Mario-Bros-Clone-Construct2\gfx\Mario\BigJumping.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="BigSkidding" pingpong="0" repeatcount="1" repeatto="0" sid="676095282835145" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="D:\Github\Super-Mario-Bros-Clone-Construct2\gfx\Mario\BigSkid.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="BigDucking" pingpong="0" repeatcount="1" repeatto="0" sid="176408928116560" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.636364" original-source="D:\Github\Super-Mario-Bros-Clone-Construct2\gfx\Mario\BigDuck.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.681818" original-source="D:\Github\Super-Mario-Bros-Clone-Construct2\gfx\Mario\BigDuck.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="747559976274925" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.5" original-source="D:\Github\Super-Mario-Bros-Clone-Construct2\gfx\Mario\Dead.png" />

@@ -66,21 +66,21 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <IsBig>false</IsBig>
+                        <IsBig>true</IsBig>
                         <IsSkidding>false</IsSkidding>
                         <IsActive>true</IsActive>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
-                                <max-speed>330</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
+                                <max-speed>150</max-speed>
+                                <acceleration>350</acceleration>
+                                <deceleration>350</deceleration>
+                                <jump-strength>250</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
+                                <jump-sustain>225</jump-sustain>
                                 <default-controls>Yes</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>

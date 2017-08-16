@@ -42,6 +42,9 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="695389619750391" type="Mario">
                                     <param id="0" name="Instance variable">IsBig</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="242584595151013" type="Mario">
+                                    <param id="0" name="Instance variable">IsSkidding</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -80,6 +83,186 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="446936668189923">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="500838145155730" type="Mario">
+                                    <param id="0" name="Instance variable">IsBig</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="394890923605640" type="Mario">
+                                    <param id="0" name="Instance variable">IsSkidding</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="896574349106820">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" name="Is moving" sid="914735207875503" type="Mario" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="491620744008519" type="Mario">
+                                            <param id="0" name="Animation">&quot;BigRunning&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="158739945568482">
+                                    <conditions>
+                                        <condition behavior="Platform" id="3" name="Is jumping" sid="142703389999704" type="Mario" />
+                                        <condition behavior="Platform" id="4" name="Is falling" sid="910820711307860" type="Mario" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="830913680868716" type="Mario">
+                                            <param id="0" name="Animation">&quot;BigJumping&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="240836385856594">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="737964336881743" type="Mario" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="206795658964500" type="Mario">
+                                            <param id="0" name="Animation">&quot;BigIdle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="320810211493164">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="101037038604557" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition behavior="Platform" id="2" name="Is on floor" sid="166454657417715" type="Mario" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="690481559216635" type="Mario">
+                                            <param id="0" name="Animation">&quot;BigDucking&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="289788566851270" type="Mario">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="871725651313670">
+                                    <conditions>
+                                        <condition id="3" name="On key released" sid="861490183714508" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="105290301224079" type="Mario">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="453383591353237">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="749544168301405" type="Mario">
+                                    <param id="0" name="Animation">&quot;SmallRunning&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="162179110189628" type="Mario">
+                                    <param id="0" name="Animation">&quot;BigRunning&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="706013679462168">
+                                    <conditions>
+                                        <condition behavior="Platform" id="1" name="Compare speed" sid="332646113763657" type="Mario">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Speed">Mario.Platform.MaxSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="225856857819460" type="Mario">
+                                            <param id="0" name="Speed">7</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="119220859219940">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="496190244073862" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="367766810568304" type="Mario">
+                                            <param id="0" name="Speed">15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="957803128509119">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="729681012778704" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="934584231967184">
+                                    <conditions>
+                                        <condition behavior="Platform" id="1" name="Compare speed" sid="275987802608573" type="Mario">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Speed">Mario.Platform.MaxSpeed</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="826325949656627" type="Mario">
+                                            <param id="0" name="Instance variable">IsBig</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="280679016300723" type="Mario">
+                                            <param id="0" name="Instance variable">IsSkidding</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="796884825462371" type="Mario">
+                                            <param id="0" name="Animation">&quot;SmallSkidding&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="327108792892222">
+                                    <conditions>
+                                        <condition behavior="Platform" id="1" name="Compare speed" sid="796734114246532" type="Mario">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Speed">Mario.Platform.MaxSpeed</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="248996685549704" type="Mario">
+                                            <param id="0" name="Instance variable">IsBig</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="936296528432462" type="Mario">
+                                            <param id="0" name="Instance variable">IsSkidding</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="490617994048829" type="Mario">
+                                            <param id="0" name="Animation">&quot;BigSkidding&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="123721477818056">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="183626108009558" type="Mario">
+                                    <param id="0" name="Animation">&quot;SmallSkidding&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="589659804997714" type="Mario">
+                                    <param id="0" name="Animation">&quot;BigSkidding&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="352425515442761" type="Mario">
+                                    <param id="0" name="Instance variable">IsSkidding</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
