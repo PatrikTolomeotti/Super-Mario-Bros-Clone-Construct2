@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Mario</name>
     <events>
+        <variable constant="0" name="Coins" sid="833954312682590" static="0" type="number">0</variable>
         <event-group description="A place for all the events and actions for Mario&apos;s animations." sid="396828751958254" title="Mario Animations">
             <sub-events>
                 <event-block sid="939775469508884">
