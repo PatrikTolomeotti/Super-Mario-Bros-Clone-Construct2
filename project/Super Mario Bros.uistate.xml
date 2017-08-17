@@ -13,7 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="1">Level 1</layout>
         <event-sheet order="2">Mario</event-sheet>
         <event-sheet order="3">Event sheet 1</event-sheet>
-        <event-sheet active="1" order="4">Items</event-sheet>
+        <event-sheet order="4">Items</event-sheet>
+        <event-sheet active="1" order="5">Blocks</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,9 +25,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Mario/" />
+        <folder expanded="0" path="object-folder/Mario/" />
         <folder expanded="1" path="object-folder/Misc/" />
         <folder expanded="1" path="object-folder/Items/" />
+        <folder expanded="1" path="object-folder/Blocks/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -37,5 +39,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Ground/" />
         <folder expanded="1" path="animation-folder/Mushroom/" />
         <folder expanded="1" path="animation-folder/Coin/" />
+        <folder expanded="1" path="animation-folder/FakeMushroom/" />
+        <folder expanded="1" path="animation-folder/FakeCoin/" />
+        <folder expanded="1" path="animation-folder/ItemBlock/" />
+        <folder expanded="1" path="animation-folder/ItemBlock_Hitbox/" />
     </folders-expanded>
 </c2uistate>

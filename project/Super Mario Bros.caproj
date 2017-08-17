@@ -210,6 +210,121 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="FakeMushroom" sid="472836511270349">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="574346963451914">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="538938614812549" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FakeCoin" sid="561183024122940">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="979883475069194">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970304965645806" speed="12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Blocks">
+            <object-type name="ItemBlock" sid="461106773211026">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="StartingY" sid="258442208248652" type="number" />
+                    <instance-variable comment="0 = Mushroom/Flower, 1 = Coin, " name="Item" sid="134989356385965" type="number" />
+                    <instance-variable name="ItemCount" sid="588563932317638" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="824587685485034">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="158288968901441">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>ItemBlock</type>
+                    <type>ItemBlock_Hitbox</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="5" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="106121292672764" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Hitbox" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Hitbox" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Hitbox" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Hitbox" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Hitbox" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Inactive" pingpong="0" repeatcount="1" repeatto="0" sid="323709337780148" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ItemBlock_Hitbox" sid="914576980306813">
+                <plugin id="Sprite" />
+                <container>
+                    <type>ItemBlock</type>
+                    <type>ItemBlock_Hitbox</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="943519204833051" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
     </object-folder>
     <families />
@@ -220,6 +335,7 @@
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Mario.xml</event-sheet>
         <event-sheet>Items.xml</event-sheet>
+        <event-sheet>Blocks.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="2" />

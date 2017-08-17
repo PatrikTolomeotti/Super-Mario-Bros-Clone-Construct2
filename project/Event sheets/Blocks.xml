@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Blocks</name>
+    <events>
+        <event-group description="" sid="638202528290183" title="ItemBlock">
+            <sub-events>
+                <event-block sid="810101444765346">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="142117014825730" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="290947861269879" type="ItemBlock_Hitbox">
+                            <param id="0" name="Object">ItemBlock</param>
+                            <param id="1" name="Image point (optional)">&quot;Hitbox&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="216042094890950" type="ItemBlock">
+                            <param id="0" name="Instance variable">StartingY</param>
+                            <param id="1" name="Value">Self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="544203530475902">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="379773058887212" type="Mario">
+                            <param id="0" name="Object">ItemBlock_Hitbox</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="509087107460631" type="ItemBlock">
+                            <param id="0" name="Instance variable">ItemCount</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="310636767031949" type="ItemBlock">
+                            <param id="0" name="Instance variable">ItemCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="503415344139281" type="ItemBlock">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="226079292417210" type="System">
+                            <param id="0" name="Seconds">0.151</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="961474800711936" type="ItemBlock">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="525998429450338" type="ItemBlock">
+                            <param id="0" name="Y">Self.StartingY</param>
+                        </action>
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="294746656651301" type="ItemBlock">
+                            <param id="0" name="Cycle position">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="130391391767129" type="Function">
+                            <param id="0" name="Name">&quot;CreateItem&quot;</param>
+                            <param id="1" name="Parameter {n}">ItemBlock.Item{###}ItemBlock.X{###}ItemBlock.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="368981130591835">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="859078823130309" type="ItemBlock">
+                                    <param id="0" name="Instance variable">ItemCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="488361153162820" type="ItemBlock">
+                                    <param id="0" name="Animation">&quot;Inactive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="807693658145195" title="ItemBlock Functions">
+            <sub-events>
+                <event-block sid="251669599278563">
+                    <conditions>
+                        <condition id="0" name="On function" sid="669344214930572" type="Function">
+                            <param id="0" name="Name">&quot;CreateItem&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="101623971896155">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="884970726862217" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="889235347528430" type="System">
+                                    <param id="0" name="Object to create">FakeMushroom</param>
+                                    <param id="1" name="Layer">&quot;Level&quot;</param>
+                                    <param id="2" name="X">Function.Param(1)</param>
+                                    <param id="3" name="Y">Function.Param(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="971496432449876">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="127322698025179" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="372063491135995" type="System">
+                                    <param id="0" name="Object to create">FakeCoin</param>
+                                    <param id="1" name="Layer">&quot;Level&quot;</param>
+                                    <param id="2" name="X">Function.Param(1)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="783564669541686" type="System">
+                                    <param id="0" name="Variable">Coins</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="277513690080907" title="FakeItems">
+            <sub-events>
+                <event-block sid="703477617652264">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="229438154318628" type="System">
+                            <param id="0" name="Object">FakeMushroom</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="658064836474554" type="System">
+                            <param id="0" name="First value">FakeMushroom.Sine.CyclePosition</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="623887574384518" type="FakeMushroom">
+                            <param id="0" name="Object">Mushroom</param>
+                            <param id="1" name="Layer">&quot;Items&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="500686263985826" type="FakeMushroom" />
+                    </actions>
+                </event-block>
+                <event-block sid="748621194978968">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="912141931299301" type="System">
+                            <param id="0" name="Object">FakeCoin</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="683071160172801" type="System">
+                            <param id="0" name="First value">FakeCoin.Sine.CyclePosition</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="724493043423007" type="FakeCoin" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
